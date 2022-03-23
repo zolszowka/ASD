@@ -21,7 +21,7 @@ def parent(i):
     return (i - 1) // 2
 
 
-def insert_1(A, x):  # insert z appendem
+def insert_1(A, x):
     A.append(x)
     i = len(A) - 1
     while i > 0 and x.val < A[parent(i)].val:
@@ -29,7 +29,7 @@ def insert_1(A, x):  # insert z appendem
         i = parent(i)
 
 
-def insert_2(A, x):  # insert bez appenda
+def insert_2(A, x):
     A[len(A) - 1] = x
     i = len(A) - 1
     while i > 0 and x.val < A[parent(i)].val:
